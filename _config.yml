@@ -26,12 +26,18 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jektex
 
-jektex:
-  cache_dir: ".jektex-cache"
-  ignore: ["*.xml"]
-  silent: false
-  macros:
-    - ["\\Q", "\\mathbb{Q}"]
-    - ["\\C", "\\mathbb{C}"]
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: plaintext
+    css_class: 'highlight'
+
+#jektex:
+#  cache_dir: ".jektex-cache"
+#  ignore: ["*.xml"]
+#  silent: false
+#  macros:
+#    - ["\\Q", "\\mathbb{Q}"]
+#    - ["\\C", "\\mathbb{C}"]

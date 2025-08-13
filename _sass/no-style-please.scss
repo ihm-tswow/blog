@@ -109,6 +109,9 @@ div.highlighter-rouge code {
   padding: 1rem;
 }
 
+// Import syntax highlighting styles
+@import "syntax-highlighting";
+
 blockquote {
   font-style: italic;
   border: thin solid black;
