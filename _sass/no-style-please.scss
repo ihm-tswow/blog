@@ -1,14 +1,40 @@
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
-  filter: invert(1);
+  background-color: #121212;
+  color: #e0e0e0;
+  
   img {
-    filter: invert(1);
-
-    &.ioda { filter: invert(0); }
+    opacity: 0.8;
+    &.ioda { opacity: 1; }
   }
-  .emoji { filter: invert(1); }
+  
+  .emoji { opacity: 0.9; }
+  
   iframe {
-    filter: invert(1);
+    border-color: #444;
+  }
+  
+  code {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+  }
+  
+  blockquote {
+    border-color: #444;
+  }
+  
+  hr {
+    &:before, &:after {
+      color: #666;
+    }
+  }
+  
+  table, th, td {
+    border-color: #444;
+  }
+  
+  a {
+    color: #80b3ff;
   }
 }
 
