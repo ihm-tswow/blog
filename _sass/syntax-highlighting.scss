@@ -1,9 +1,15 @@
 /* Rouge syntax highlighting styles */
 
 .highlight {
+  background-color: #f8f8f8;
+  border: 1px solid #131313;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  overflow: auto;
+  
   .c     { color: #998; font-style: italic } // Comment
   .err   { color: #a61717; background-color: #e3d2d2 } // Error
-  .k     { font-weight: bold } // Keyword
+  .k     { font-weight: bold; color: #000080 } // Keyword
   .o     { font-weight: bold } // Operator
   .cm    { color: #998; font-style: italic } // Comment.Multiline
   .cp    { color: #999; font-weight: bold } // Comment.Preproc
@@ -21,10 +27,10 @@
   .gs    { font-weight: bold } // Generic.Strong
   .gu    { color: #aaa } // Generic.Subheading
   .gt    { color: #a00 } // Generic.Traceback
-  .kc    { font-weight: bold } // Keyword.Constant
-  .kd    { font-weight: bold } // Keyword.Declaration
-  .kp    { font-weight: bold } // Keyword.Pseudo
-  .kr    { font-weight: bold } // Keyword.Reserved
+  .kc    { font-weight: bold; color: #000080 } // Keyword.Constant
+  .kd    { font-weight: bold; color: #000080 } // Keyword.Declaration
+  .kp    { font-weight: bold; color: #000080 } // Keyword.Pseudo
+  .kr    { font-weight: bold; color: #000080 } // Keyword.Reserved
   .kt    { color: #458; font-weight: bold } // Keyword.Type
   .m     { color: #099 } // Literal.Number
   .s     { color: #d14 } // Literal.String
@@ -62,33 +68,54 @@
   .il    { color: #099 } // Literal.Number.Integer.Long
 }
 
-// Dark theme adjustments
+// Code blocks (```)
+pre.highlight {
+  padding: 10px;
+  border-radius: 3px;
+}
+
+// Inline code (`code`)
+code.highlighter-rouge {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+// Dark theme adjustments (Visual Studio-like)
 body[a="dark"] {
   .highlight {
-    background-color: #2d2d2d;
-    color: #e0e0e0;
-    
-    .c, .cm, .c1, .cs { color: #75715e; } // Comments
-    .err { color: #f8f8f2; background-color: #403d3d; } // Error
-    .k, .kc, .kd, .kp, .kr, .kt { color: #66d9ef; } // Keywords
-    .o, .ow { color: #f92672; } // Operators
-    .p { color: #f8f8f2; } // Punctuation
-    .gd { color: #f92672; } // Generic.Deleted
-    .gi { color: #a6e22e; } // Generic.Inserted
+    background-color: #111111;
+    border-color: #111111;
+    color: #111111;
+
+    .c, .cm, .c1, .cs { color: #608b4e; } // Comments
+    .err { color: #d4d4d4; background-color: #3c3c3c; } // Error
+    .k, .kc, .kd, .kp, .kr { color: #569cd6; } // Keywords
+    .kt { color: #4ec9b0; } // Keyword.Type
+    .o, .ow { color: #d4d4d4; } // Operators
+    .p { color: #d4d4d4; } // Punctuation
+    .gd { color: #ce9178; } // Generic.Deleted
+    .gi { color: #b5cea8; } // Generic.Inserted
     .gs { } // Generic.Strong
-    .gu { color: #75715e; } // Generic.Subheading
-    .kn { color: #f92672; } // Keyword.Namespace
-    .kt { color: #66d9ef; } // Keyword.Type
-    .m, .mf, .mh, .mi, .mo, .il { color: #ae81ff; } // Numbers
-    .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #e6db74; } // Strings
-    .na { color: #a6e22e; } // Name.Attribute
-    .nc { color: #a6e22e; } // Name.Class
-    .nd { color: #a6e22e; } // Name.Decorator
-    .ne { color: #a6e22e; } // Name.Exception
-    .nf { color: #a6e22e; } // Name.Function
-    .nx { color: #a6e22e; } // Name.Other
-    .nt { color: #f92672; } // Name.Tag
-    .nv { color: #f8f8f2; } // Name.Variable
-    .w { color: #f8f8f2; } // Text.Whitespace
+    .gu { color: #608b4e; } // Generic.Subheading
+    .kn { color: #569cd6; } // Keyword.Namespace
+    .m, .mf, .mh, .mi, .mo, .il { color: #b5cea8; } // Numbers
+    .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #ce9178; } // Strings
+    .na { color: #9cdcfe; } // Name.Attribute
+    .nb { color: #4ec9b0; } // Name.Builtin
+    .nc { color: #4ec9b0; } // Name.Class
+    .nd { color: #c586c0; } // Name.Decorator
+    .ne { color: #d7ba7d; } // Name.Exception
+    .nf { color: #dcdcaa; } // Name.Function
+    .nx { color: #9cdcfe; } // Name.Other
+    .nt { color: #569cd6; } // Name.Tag
+    .nv { color: #9cdcfe; } // Name.Variable
+    .w { color: #d4d4d4; } // Text.Whitespace
+  }
+  
+  code.highlighter-rouge {
+    background-color: #252526;
+    color: #d4d4d4;
   }
 }

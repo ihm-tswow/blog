@@ -1,4 +1,4 @@
-title: no style, please! # name of the site
+title: ihm's blog # name of the site
 author: Riccardo Graziosi # name of site's author
 email: riccardo.graziosi97@gmail.com # email of site's author
 url: https://riggraz.dev # root address of the site
@@ -34,10 +34,3 @@ kramdown:
     default_lang: plaintext
     css_class: 'highlight'
 
-#jektex:
-#  cache_dir: ".jektex-cache"
-#  ignore: ["*.xml"]
-#  silent: false
-#  macros:
-#    - ["\\Q", "\\mathbb{Q}"]
-#    - ["\\C", "\\mathbb{C}"]
